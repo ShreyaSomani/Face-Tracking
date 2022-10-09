@@ -26,7 +26,7 @@ def telloGetFrame(myDrone,w=360,h=240):
 #find the faces in our image using the viola jones method
 def findFace(img):
       faceCascade = cv2.CascadeClassifier("haarcascade_frontalface_default.xml")
-      imgGray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+      imgGray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY) #gray image to reduce processing
       faces = faceCascade.detectMultiScale(imgGray, 1.1, 4) #skinfactor, minimum neighbours
 
       #creating a list to store faces and areas to find closest face
